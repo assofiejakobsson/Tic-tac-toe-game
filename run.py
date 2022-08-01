@@ -81,6 +81,7 @@ def checkDiagonally(board):
         winner = board[2]
         return True
 
+# Check tie
 
 def checkTie(board):
     global gameRunning
@@ -88,6 +89,12 @@ def checkTie(board):
         displayBoard(board)
         print("It,s a tie!")
         gameRunning = False
+
+# Check winner
+
+def checkWinner(board):
+    if checkHorizontally(board) or checkVertically(board) or checkDiagonally(board)
+    print(f"Winner is {winner}")
 
 # Switch player
 
@@ -103,6 +110,12 @@ def switchPlayer():
 
 
 # Message Win, lose or a tie
+
+# Game lop 
+
 while gameRunning:
     displayBoard(board)
     playerChoise(board)
+    checkTie(board)
+    checkWinner(board)
+    switchPlayer(board)
