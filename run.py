@@ -17,7 +17,7 @@ def playerChoise(board):
     if inp >= 1 and inp <= 9 and board[inp-1] == "-":
         board[inp-1] = player
     else:
-        print("The spot is alredy taken! Pleas try another number between 1-9 Pleas try another number between 1-9")
+        print("The spot is alredy taken! Pleas try another number between 1-9.")
 
 
 print(playerChoise(board))
@@ -84,15 +84,25 @@ def checkDiagonally(board):
 
 def checkTie(board):
     global gameRunning
-    if -"-" not in board:
+    if "-" not in board:
         displayBoard(board)
         print("It,s a tie!")
-        gameRunning= False
+        gameRunning = False
+
+# Switch player
+
+def switchPlayer():
+    global player
+    if player == "x":
+        player = "o"
+    else: 
+        player = "x"
+
 
 # Check for wrong input and print error message
+
 
 # Message Win, lose or a tie
 while gameRunning:
     displayBoard(board)
     playerChoise(board)
-
