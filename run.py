@@ -56,6 +56,7 @@ def checkHorizontally(board):
 
 # Check If there is tree in a row vertically
 
+
 def checkVertically(board):
     global winner
     if board[0] == board[3] == board[6] and board[0] != "-":
@@ -70,6 +71,7 @@ def checkVertically(board):
 
 # Check If there is tree in a row diagonally
 
+
 def checkDiagonally(board):
     global winner
     if board[0] == board[4] == board[8] and board[0] != "-":
@@ -78,13 +80,11 @@ def checkDiagonally(board):
     elif board[2] == board[4] == board[6] and board[2] != "-":
         winner = board[2]
         return True
-    
 
 
 # Check for wrong input and print error message
 
 # Message Win, lose or a tie
-
 while gameRunning:
     displayBoard(board)
     playerChoise(board)
