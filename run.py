@@ -82,6 +82,13 @@ def checkDiagonally(board):
         return True
 
 
+def checkTie(board):
+    global gameRunning
+    if -"-" not in board:
+        displayBoard(board)
+        print("It,s a tie!")
+        gameRunning= False
+
 # Check for wrong input and print error message
 
 # Message Win, lose or a tie
@@ -89,6 +96,3 @@ while gameRunning:
     displayBoard(board)
     playerChoise(board)
 
-while gameRunning:
-    displayBoard(board)
-    playerChoise(board)
