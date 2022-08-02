@@ -20,11 +20,7 @@ winner = None
 
 #Reference board
 
-def refereceBoard(refBoard):
-    print("Reference board")
-    print("1-" "|"  "-2-" "|" "-3")
-    print("4-" "|"  "-5-" "|" "-6") 
-    print("7-" "|"  "-8-" "|" "-9")
+
 
 def start():
     print("Welcome to Tic, tac, toe game!")
@@ -39,10 +35,30 @@ def start():
         print("Thank you for playing")
         inp = str(input("If yo want to play agin enter p: "))
     elif inp == "p":
-        global board
+        global refboard
         
 
 start()
+
+
+def refereceBoard(refBoard):
+    print("Reference board")
+    print("1-" "|"  "-2-" "|" "-3")
+    print("4-" "|"  "-5-" "|" "-6") 
+    print("7-" "|"  "-8-" "|" "-9")
+
+refereceBoard(refBoard)   
+
+
+def displayBoard(board):
+    print("Game board")
+    print(board[0] + " | " + board[1] + " | " + board[2])
+    print(board[3] + " | " + board[4] + " | " + board[5])
+    print(board[6] + " | " + board[7] + " | " + board[8])
+
+
+displayBoard(board)
+
 
 # Make a choise
 
@@ -69,14 +85,7 @@ playerChoise(board)
 
 # Pleas Enter your name
 
-def displayBoard(board):
-    print("Game board")
-    print(board[0] + " | " + board[1] + " | " + board[2])
-    print(board[3] + " | " + board[4] + " | " + board[5])
-    print(board[6] + " | " + board[7] + " | " + board[8])
 
-
-displayBoard(board)
 
 
 # Check If there is tree in a row horizontally
