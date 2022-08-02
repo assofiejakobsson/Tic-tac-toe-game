@@ -1,28 +1,46 @@
 import random
 
+# Global variabel
+
 board = ["-", "-", "-",
          "-", "-", "-",
-         "-", "-", "-", ]
+         "-", "-", "-"]
+
 
 player = "x"
-computer = "o"
 gameRunning = True
 winner = None
 
 # Welcome
 
+
+
 # Make a choise
 
 
 def playerChoise(board):
-    inp = int(input("Enter a number between 1-9: "))
-    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
+    print("Welcome to Tic, tac, toe game!")
+    print("Game rules: ")
+    print("1. The game is played on a grid that's 3 squares by 3 squares.")
+    print("2. You are X, the computer is o.")
+    print("3. Players take turns putting their marks in empty squares.")
+    print("4. The first player to get 3 in a row, is the winner.")
+    print("5. You can get three in a row (up, down, across, or diagonally)")
+
+    inp = str(input("Enter p for play or r for restart: "))
+    if inp == "r":
+        print("")
+    elif inp == "p":
+        inp = int(input("Enter a number between 1-9: "))
+    elif inp >= 1 and inp <= 9 and board[inp-1] == "-":
         board[inp-1] = player
+    elif inp <= 0 or inp > 9:
+        print("The number are incorect! Pleas try another number between 1-9")
     else:
-        print("The spot is alredy taken! Pleas try another number between 1-9.")
+        print("The spot is alredy taken! Pleas try another number between 1-9")
 
 
-print(playerChoise(board))
+playerChoise(board)
 
 
 # Game rules
@@ -39,12 +57,12 @@ def displayBoard(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-print(displayBoard(board))
+displayBoard(board)
 
 
 # Check If there is tree in a row horizontally
 
-def checkHorizontally(board):
+def checkHorizont(board):
     global winner
     if board[0] == board[1] == board[2] and board[1] != "-":
         winner = board[0]
@@ -59,7 +77,7 @@ def checkHorizontally(board):
 # Check If there is tree in a row vertically
 
 
-def checkVertically(board):
+def checkVertic(board):
     global winner
     if board[0] == board[3] == board[6] and board[0] != "-":
         winner = board[0]
@@ -74,7 +92,7 @@ def checkVertically(board):
 # Check If there is tree in a row diagonally
 
 
-def checkDiagonally(board):
+def checkDiagon(board):
     global winner
     if board[0] == board[4] == board[8] and board[0] != "-":
         winner = board[0]
@@ -93,12 +111,14 @@ def checkTie(board):
         print("It,s a tie!")
         gameRunning = False
 
+
 # Check winner
 
 
 def checkWinner():
-    if checkHorizontally(board) or checkVertically(board) or checkDiagonally(board):
+    if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
         print(f"Winner is {winner}")
+
 
 # Switch player
 
@@ -109,6 +129,7 @@ def switchPlayer():
         player = "o"
     else:
         player = "x"
+
 
 # computer choise
 
@@ -128,6 +149,7 @@ def computer(board):
 
 # Game lop
 
+
 while gameRunning:
     displayBoard(board)
     playerChoise(board)
@@ -137,3 +159,4 @@ while gameRunning:
     computer(board)
     checkTie(board)
     checkWinner()
+
