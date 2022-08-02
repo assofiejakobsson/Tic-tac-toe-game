@@ -18,6 +18,14 @@ winner = None
 
 # Welcome
 
+#Reference board
+
+def refereceBoard(refBoard):
+    print("Reference board")
+    print("1-" "|"  "-2-" "|" "-3")
+    print("4-" "|"  "-5-" "|" "-6") 
+    print("7-" "|"  "-8-" "|" "-9")
+
 def start():
     print("Welcome to Tic, tac, toe game!")
     print("Game rules: ")
@@ -40,11 +48,12 @@ start()
 
 
 def playerChoise(board):
+    global refBoard
     inp = int(input("Enter a number between 1-9: "))
     if inp >= 1 and inp <= 9 and board[inp-1] == "-":
         board[inp-1] = player
     elif inp <= 0 or inp > 9:
-        print("The number are incorect! Pleas try another number between 1-9")
+        print("The input are incorect! Pleas try another number between 1-9")
     else:
         print("The spot is alredy taken! Pleas try another number between 1-9")
 
@@ -61,6 +70,7 @@ playerChoise(board)
 # Pleas Enter your name
 
 def displayBoard(board):
+    print("Game board")
     print(board[0] + " | " + board[1] + " | " + board[2])
     print(board[3] + " | " + board[4] + " | " + board[5])
     print(board[6] + " | " + board[7] + " | " + board[8])
@@ -160,7 +170,7 @@ def computer(board):
 
 
 while gameRunning:
-    
+    refereceBoard(refBoard)
     displayBoard(board)
     playerChoise(board)
     checkTie(board)
