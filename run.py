@@ -2,6 +2,10 @@ import random
 
 # Global variabel
 
+refBoard = ["1", "2", "3",
+            "4", "5", "6",
+            "7", "8", "9"]
+
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
@@ -11,14 +15,10 @@ player = "x"
 gameRunning = True
 winner = None
 
+
 # Welcome
 
-
-
-# Make a choise
-
-
-def playerChoise(board):
+def start():
     print("Welcome to Tic, tac, toe game!")
     print("Game rules: ")
     print("1. The game is played on a grid that's 3 squares by 3 squares.")
@@ -29,10 +29,19 @@ def playerChoise(board):
     inp = str(input("Enter p for play or e for exit: "))
     if inp == "e":
         print("Thank you for playing")
-        inp = str(input("If yo wan't to play agin enter p: "))
+        inp = str(input("If yo want to play agin enter p: "))
     elif inp == "p":
-        inp = int(input("Enter a number between 1-9: "))
-    elif inp >= 1 and inp <= 9 and board[inp-1] == "-":
+        global board
+        
+
+start()
+
+# Make a choise
+
+
+def playerChoise(board):
+    inp = int(input("Enter a number between 1-9: "))
+    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
         board[inp-1] = player
     elif inp <= 0 or inp > 9:
         print("The number are incorect! Pleas try another number between 1-9")
@@ -151,6 +160,7 @@ def computer(board):
 
 
 while gameRunning:
+    
     displayBoard(board)
     playerChoise(board)
     checkTie(board)
@@ -159,4 +169,3 @@ while gameRunning:
     computer(board)
     checkTie(board)
     checkWinner()
-
