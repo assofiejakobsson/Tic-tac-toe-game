@@ -21,10 +21,7 @@ winner = None
 
 #Reference board
 
-
-
-def start():
-    print("Welcome to Tic, tac, toe game!")
+def gameRules():
     print("Game rules: ")
     print("1. The game is played on a grid that's 3 squares by 3 squares.")
     print("2. You are x, the computer is o.")
@@ -39,9 +36,30 @@ def start():
         os.system('clear')
     elif inp == "p":
         global refboard
+    
+
+
+
+def start():
+    print("Welcome to Tic, tac, toe game!")
+    inp = str(input("Enter p for play, r for rules or e for exit: "))
+    if inp == "e":
+        print("Thank you for playing")
+        os.system('clear')
+        inp = str(input("If yo want to play agin enter p: "))
+        os.system('clear')
+    elif inp == "r":
+        gameRules()
+        os.system('clear')
+    elif inp == "p":
+        global refboard
         
 
 start()
+
+
+
+
 
 
 def refereceBoard(refBoard):
