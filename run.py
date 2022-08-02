@@ -1,4 +1,5 @@
 import random
+import os
 
 # Global variabel
 
@@ -33,7 +34,9 @@ def start():
     inp = str(input("Enter p for play or e for exit: "))
     if inp == "e":
         print("Thank you for playing")
+        os.system('clear')
         inp = str(input("If yo want to play agin enter p: "))
+        os.system('clear')
     elif inp == "p":
         global refboard
         
@@ -146,6 +149,7 @@ def checkTie(board):
 def checkWinner():
     if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
         print(f"Winner is {winner}")
+        
 
 
 # Switch player
