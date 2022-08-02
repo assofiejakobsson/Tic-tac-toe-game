@@ -22,14 +22,14 @@ def playerChoise(board):
     print("Welcome to Tic, tac, toe game!")
     print("Game rules: ")
     print("1. The game is played on a grid that's 3 squares by 3 squares.")
-    print("2. You are X, the computer is o.")
+    print("2. You are x, the computer is o.")
     print("3. Players take turns putting their marks in empty squares.")
     print("4. The first player to get 3 in a row, is the winner.")
     print("5. You can get three in a row (up, down, across, or diagonally)")
-
-    inp = str(input("Enter p for play or r for restart: "))
-    if inp == "r":
-        print("")
+    inp = str(input("Enter p for play or e for exit: "))
+    if inp == "e":
+        print("Thank you for playing")
+        inp = str(input("If yo wan't to play agin enter p: "))
     elif inp == "p":
         inp = int(input("Enter a number between 1-9: "))
     elif inp >= 1 and inp <= 9 and board[inp-1] == "-":
