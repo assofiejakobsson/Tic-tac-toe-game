@@ -56,23 +56,24 @@ def start():
         
 start()
 
-"""
-def restartGame(board):
+
+def restartGame():
     #os.system('clear')
     board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-    gameRunning = True
-    inp = str(input("Enter p for play agin or e for exit: "))
+    inp = str(input("Enter p for play agin, r for ruels or e for exit: "))
     if inp == "e":
         print("Thank you for playing")
         #os.system('clear')
         inp = str(input("If yo want to play agin enter p: "))
         #os.system('clear')
+    elif inp == "r":
+        gameRules()
+        os.system('clear')
     elif inp == "p":
-        gameRunning = True
+        os.system('clear')
 
-"""
 
 
 
@@ -194,7 +195,7 @@ def checkWinner():
         board = ["-", "-", "-",
         "-", "-", "-",
         "-", "-", "-"]
-        start()
+        restartGame()
         gameRunning = False
 
 
@@ -206,7 +207,7 @@ def checkTie():
         board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
-        start()
+        restartGame()
         gameRunning = False
 
 
