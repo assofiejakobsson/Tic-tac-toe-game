@@ -37,15 +37,15 @@ def gameRules():
         inp = str(input("If yo want to play agin enter p: "))
         os.system('clear')
     elif inp == "p":
-        global refBoard
+        os.system('clear')
 
 
 def start():
     print("Welcome to Tic, tac, toe game!")
     inp = str(input("Enter p for play, r for rules or e for exit: "))
+    os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        os.system('clear')
         inp = str(input("If yo want to play agin enter p: "))
         os.system('clear')
     elif inp == "r":
@@ -58,16 +58,16 @@ start()
 
 
 def restartGame():
-    #os.system('clear')
+    os.system('clear')
     board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
     inp = str(input("Enter p for play agin, r for ruels or e for exit: "))
+    os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        #os.system('clear')
         inp = str(input("If yo want to play agin enter p: "))
-        #os.system('clear')
+        os.system('clear')
     elif inp == "r":
         gameRules()
         os.system('clear')
@@ -226,6 +226,7 @@ while gameRunning:
     computer(board)
     checkWinner()
     checkTie()
+    os.system('clear')
     
     
     
