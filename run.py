@@ -1,6 +1,6 @@
 import random
 import os
-import sys
+import time
 
 # Global variabel
 
@@ -58,11 +58,7 @@ start()
 
 
 def restartGame():
-    os.system('clear')
-    board = ["-", "-", "-",
-         "-", "-", "-",
-         "-", "-", "-"]
-    inp = str(input("Enter p for play agin, r for ruels or e for exit: "))
+    inp = str(input("Enter p for play agin or r for ruels or e for exit: "))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
@@ -192,6 +188,7 @@ def checkWinner():
     if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
         displayBoard(board)
         print(f"Winner is {winner}")
+        time.sleep(2.4)
         board = ["-", "-", "-",
         "-", "-", "-",
         "-", "-", "-"]
