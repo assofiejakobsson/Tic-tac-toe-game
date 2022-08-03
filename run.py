@@ -52,9 +52,8 @@ def start():
         gameRules()
         os.system('clear')
     elif inp == "p":
-        global refBoard
-
-
+        os.system('clear')
+        
 start()
 
 """
@@ -88,7 +87,7 @@ def refereceBoard(refBoard):
     print("7-" "|"  "-8-" "|" "-9")
 
 
-refereceBoard(refBoard)
+
 
 
 def displayBoard(board):
@@ -98,7 +97,7 @@ def displayBoard(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-displayBoard(board)
+
 
 
 # Make a choise
@@ -187,9 +186,21 @@ def checkDiagon(board):
 
 # Check tie
 
+def checkWinner():
+    global board
+    if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
+        displayBoard(board)
+        print(f"Winner is {winner}")
+        board = ["-", "-", "-",
+        "-", "-", "-",
+        "-", "-", "-"]
+        start()
+        gameRunning = False
+
+
 def checkTie():
     global board
-    if "-" not in board:
+    if "-" not in board and winner == None:
         displayBoard(board)
         print("It,s a tie!")
         board = ["-", "-", "-",
@@ -199,49 +210,22 @@ def checkTie():
         gameRunning = False
 
 
-def checkWinner():
-    global board
-    if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
-        print(f"Winner is {winner}")
-        board = ["-", "-", "-",
-        "-", "-", "-",
-        "-", "-", "-"]
-        start()
-        gameRunning = False
-        
-        
-       
-
-# Check winner
 
         
         
-
-
-# Switch player
-
-
-# computer choise
-
-
-# Check for wrong input and print error message
-
-
-# Message Win, lose or a tie
-
-# Game lop
 
 
 while gameRunning:
     refereceBoard(refBoard)
     displayBoard(board)
     playerChoise(board)
-    checkTie()
     checkWinner()
+    checkTie()
     switchPlayer()
     computer(board)
-    checkTie()
     checkWinner()
+    checkTie()
+    
     
     
 
