@@ -1,3 +1,5 @@
+# Imports
+
 import random
 import os
 import time
@@ -12,16 +14,11 @@ board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
 
-
 player = "x"
 gameRunning = True
 winner = None
+input_correct = False
 
-
-
-# Welcome
-
-# Reference board
 
 def gameRules():
     print("Game rules: ")
@@ -71,11 +68,7 @@ def restartGame():
         os.system('clear')
 
 
-
-
-
-
-
+# Reference board
 
 def refereceBoard(refBoard):
     print("Reference board")
@@ -84,8 +77,7 @@ def refereceBoard(refBoard):
     print("7-" "|"  "-8-" "|" "-9")
 
 
-
-
+# Game Board
 
 def displayBoard(board):
     print("Game board")
@@ -94,22 +86,18 @@ def displayBoard(board):
     print(board[6] + " | " + board[7] + " | " + board[8])
 
 
-
-
-
-# Make a choise
-
-
 def playerChoise(board):
-    global refBoard
-    inp = int(input("Enter a number between 1-9: "))
-    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
-        board[inp-1] = player
-    elif inp <= 0 or inp > 9:
-        print("The input are incorect! Pleas try another number between 1-9")
-    else:
-        print("The spot is alredy taken! Pleas try another number between 1-9")
-
+    global input_correct
+    while input_correct is False:
+        inp = int(input("Enter a number between 1-9: "))
+        if inp >= 1 and inp <= 9 and board[inp-1] == "-":
+            board[inp-1] = player
+            input_correct = True
+        elif inp <= 0 or inp > 9:
+            print("The input are incorect! Pleas try another number between 1-9")
+        else:
+            print("The spot is alredy taken! Pleas try another number between 1-9")
+    input_correct = False
 
 
 def switchPlayer():
@@ -127,20 +115,6 @@ def computer(board):
             board[position] = "o"
             switchPlayer()
 
-
-
-
-
-# Game rules
-
-# Exit the game
-
-# Start the game
-
-# Pleas Enter your name
-
-
-# Check If there is tree in a row horizontally
 
 def checkHorizont(board):
     global winner
@@ -224,6 +198,7 @@ while gameRunning:
     checkWinner()
     checkTie()
     os.system('clear')
+    
     
     
     
