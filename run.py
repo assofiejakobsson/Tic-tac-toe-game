@@ -1,5 +1,6 @@
 import random
 import os
+import sys
 
 # Global variabel
 
@@ -17,9 +18,10 @@ gameRunning = True
 winner = None
 
 
+
 # Welcome
 
-#Reference board
+# Reference board
 
 def gameRules():
     print("Game rules: ")
@@ -35,9 +37,7 @@ def gameRules():
         inp = str(input("If yo want to play agin enter p: "))
         os.system('clear')
     elif inp == "p":
-        global refboard
-    
-
+        global refBoard
 
 
 def start():
@@ -52,10 +52,29 @@ def start():
         gameRules()
         os.system('clear')
     elif inp == "p":
-        global refboard
-        
+        global refBoard
+
 
 start()
+
+"""
+def restartGame(board):
+    #os.system('clear')
+    board = ["-", "-", "-",
+         "-", "-", "-",
+         "-", "-", "-"]
+    gameRunning = True
+    inp = str(input("Enter p for play agin or e for exit: "))
+    if inp == "e":
+        print("Thank you for playing")
+        #os.system('clear')
+        inp = str(input("If yo want to play agin enter p: "))
+        #os.system('clear')
+    elif inp == "p":
+        gameRunning = True
+
+"""
+
 
 
 
@@ -65,10 +84,11 @@ start()
 def refereceBoard(refBoard):
     print("Reference board")
     print("1-" "|"  "-2-" "|" "-3")
-    print("4-" "|"  "-5-" "|" "-6") 
+    print("4-" "|"  "-5-" "|" "-6")
     print("7-" "|"  "-8-" "|" "-9")
 
-refereceBoard(refBoard)   
+
+refereceBoard(refBoard)
 
 
 def displayBoard(board):
@@ -95,7 +115,24 @@ def playerChoise(board):
         print("The spot is alredy taken! Pleas try another number between 1-9")
 
 
-playerChoise(board)
+
+def switchPlayer():
+    global player
+    if player == "x":
+        player = "o"
+    else:
+        player = "x"
+
+
+def computer(board):
+    while player == "o":
+        position = random.randint(0, 8)
+        if board[position] == "-":
+            board[position] = "o"
+            switchPlayer()
+
+
+
 
 
 # Game rules
@@ -105,8 +142,6 @@ playerChoise(board)
 # Start the game
 
 # Pleas Enter your name
-
-
 
 
 # Check If there is tree in a row horizontally
@@ -152,44 +187,41 @@ def checkDiagon(board):
 
 # Check tie
 
-
-def checkTie(board):
-    global gameRunning
+def checkTie():
+    global board
     if "-" not in board:
         displayBoard(board)
         print("It,s a tie!")
+        board = ["-", "-", "-",
+         "-", "-", "-",
+         "-", "-", "-"]
+        start()
         gameRunning = False
 
 
-# Check winner
-
-
 def checkWinner():
+    global board
     if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
         print(f"Winner is {winner}")
+        board = ["-", "-", "-",
+        "-", "-", "-",
+        "-", "-", "-"]
+        start()
+        gameRunning = False
+        
+        
+       
+
+# Check winner
+
+        
         
 
 
 # Switch player
 
 
-def switchPlayer():
-    global player
-    if player == "x":
-        player = "o"
-    else:
-        player = "x"
-
-
 # computer choise
-
-
-def computer(board):
-    while player == "o":
-        position = random.randint(0, 8)
-        if board[position] == "-":
-            board[position] = "o"
-            switchPlayer()
 
 
 # Check for wrong input and print error message
@@ -204,9 +236,12 @@ while gameRunning:
     refereceBoard(refBoard)
     displayBoard(board)
     playerChoise(board)
-    checkTie(board)
+    checkTie()
     checkWinner()
     switchPlayer()
     computer(board)
-    checkTie(board)
+    checkTie()
     checkWinner()
+    
+    
+
