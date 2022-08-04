@@ -19,6 +19,27 @@ gameRunning = True
 winner = None
 input_correct = False
 
+def restartGame():
+    """
+    Used when a player wants to play again. Gives the user the options to
+    play again, play rules, or exit the game. With a suitable message.
+    """
+    inp = str(input("Enter p for play or r for ruels or e for exit: \n"))
+    os.system('clear')
+    if inp == "e":
+        print("Thank you for playing")
+        inp = str(input("If yo want to play agin enter p: \n"))
+        os.system('clear')
+    elif inp == "r":
+        gameRules()
+        os.system('clear')
+    elif inp == "p":
+        os.system('clear')
+    else:
+        print("Wrong input") 
+        restartGame()
+        os.system('clear')
+
 
 def gameRules():
     """
@@ -41,7 +62,7 @@ def gameRules():
         os.system('clear')
     else:
         print("Wrong input") 
-        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
+        restartGame()
         os.system('clear')
 
 
@@ -64,33 +85,11 @@ def start():
         os.system('clear')
     else:
         print("Wrong input") 
-        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
+        restartGame()
         os.system('clear')
 
 
 start()
-
-
-def restartGame():
-    """
-    Used when a player wants to play again. Gives the user the options to
-    play again, play rules, or exit the game. With a suitable message.
-    """
-    inp = str(input("Enter p for play agin or r for ruels or e for exit: \n"))
-    os.system('clear')
-    if inp == "e":
-        print("Thank you for playing")
-        inp = str(input("If yo want to play agin enter p: \n"))
-        os.system('clear')
-    elif inp == "r":
-        gameRules()
-        os.system('clear')
-    elif inp == "p":
-        os.system('clear')
-    else:
-        print("Wrong input") 
-        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
-        os.system('clear')
 
 
 def refereceBoard(refBoard):
