@@ -35,7 +35,7 @@ option to choose to quit the game or play.
     if inp == "e":
         print("Thank you for playing")
         os.system('clear')
-        inp = str(input("If yo want to play agin enter p: "))
+        inp = str(input("If yo want to play agin enter p: \n"))
         os.system('clear')
     elif inp == "p":
         os.system('clear')
@@ -47,11 +47,11 @@ Displays a welcome text. And gives the user the choice to
 play, read game rules or exit the game. With a suitable message.
 """
     print("Welcome to Tic, tac, toe game!")
-    inp = str(input("Enter p for play, r for rules or e for exit: "))
+    inp = str(input("Enter p for play, r for rules or e for exit: \n"))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        inp = str(input("If yo want to play agin enter p: "))
+        inp = str(input("If yo want to play agin enter p: \n"))
         os.system('clear')
     elif inp == "r":
         gameRules()
@@ -67,11 +67,11 @@ def restartGame():
 Used when a player wants to play again. Gives the user the options to 
 play again, play rules, or exit the game. With a suitable message.
 """
-    inp = str(input("Enter p for play agin or r for ruels or e for exit: "))
+    inp = str(input("Enter p for play agin or r for ruels or e for exit: \n"))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        inp = str(input("If yo want to play agin enter p: "))
+        inp = str(input("If yo want to play agin enter p: \n"))
         os.system('clear')
     elif inp == "r":
         gameRules()
@@ -111,7 +111,7 @@ And displays an appropriate message.
 """
     global input_correct
     while input_correct is False:
-        inp = int(input("Enter a number between 1-9: "))
+        inp = int(input("Enter a number between 1-9: \n"))
         if inp >= 1 and inp <= 9 and board[inp-1] == "-":
             board[inp-1] = player
             input_correct = True
