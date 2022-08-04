@@ -39,6 +39,10 @@ def gameRules():
         os.system('clear')
     elif inp == "p":
         os.system('clear')
+    else:
+        print("Wrong input") 
+        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
+        os.system('clear')
 
 
 def start():
@@ -57,6 +61,10 @@ def start():
         gameRules()
         os.system('clear')
     elif inp == "p":
+        os.system('clear')
+    else:
+        print("Wrong input") 
+        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
         os.system('clear')
 
 
@@ -78,6 +86,10 @@ def restartGame():
         gameRules()
         os.system('clear')
     elif inp == "p":
+        os.system('clear')
+    else:
+        print("Wrong input") 
+        inp = str(input("Enter p for play, r for rules or e for exit: \n"))
         os.system('clear')
 
 
@@ -215,7 +227,6 @@ def checkTie():
     And the game restarts.
     """
     global board
-    global winner
     if "-" not in board:
         displayBoard(board)
         print("It,s a tie!")
