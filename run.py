@@ -1,8 +1,8 @@
 # Imports
 
-import random
-import os
-import time
+import random # Used for the computer's selection.
+import os # Used to clear the screen.
+import time # Used to set time before another method is executed.
 
 # Global variabel
 
@@ -21,6 +21,10 @@ input_correct = False
 
 
 def gameRules():
+"""
+Shows the game rules. And gives the user the 
+option to choose to quit the game or play.
+"""
     print("Game rules: ")
     print("1. The game is played on a grid that's 3 squares by 3 squares.")
     print("2. You are x, the computer is o.")
@@ -38,6 +42,10 @@ def gameRules():
 
 
 def start():
+"""
+Displays a welcome text. And gives the user the choice to 
+play, read game rules or exit the game. With a suitable message.
+"""
     print("Welcome to Tic, tac, toe game!")
     inp = str(input("Enter p for play, r for rules or e for exit: "))
     os.system('clear')
@@ -55,6 +63,10 @@ start()
 
 
 def restartGame():
+"""
+Used when a player wants to play again. Gives the user the options to 
+play again, play rules, or exit the game. With a suitable message.
+"""
     inp = str(input("Enter p for play agin or r for ruels or e for exit: "))
     os.system('clear')
     if inp == "e":
@@ -68,18 +80,23 @@ def restartGame():
         os.system('clear')
 
 
-# Reference board
-
 def refereceBoard(refBoard):
+"""
+The reference board is displayed when the game 
+is running to facilitate UX.
+"""
     print("Reference board")
     print("1-" "|"  "-2-" "|" "-3")
     print("4-" "|"  "-5-" "|" "-6")
     print("7-" "|"  "-8-" "|" "-9")
 
 
-# Game Board
-
 def displayBoard(board):
+"""
+The game board is displayed when the game 
+is running. And it updates as the user 
+and the computer make their choices.
+"""
     print("Game board")
     print(board[0] + " | " + board[1] + " | " + board[2])
     print(board[3] + " | " + board[4] + " | " + board[5])
@@ -87,6 +104,11 @@ def displayBoard(board):
 
 
 def playerChoise(board):
+"""
+Makes the user's choice work. And checks that the input 
+is within the limits of the game. 
+And displays an appropriate message.
+"""
     global input_correct
     while input_correct is False:
         inp = int(input("Enter a number between 1-9: "))
@@ -101,6 +123,9 @@ def playerChoise(board):
 
 
 def switchPlayer():
+"""
+Switch between player and computer's turn to choose.
+"""
     global player
     if player == "x":
         player = "o"
@@ -109,6 +134,9 @@ def switchPlayer():
 
 
 def computer(board):
+"""
+Sets the computer's choices and makes them random.
+"""
     while player == "o":
         position = random.randint(0, 8)
         if board[position] == "-":
@@ -117,6 +145,10 @@ def computer(board):
 
 
 def checkHorizont(board):
+"""
+Checks if any player has got three in a row
+horizontally. And if so, that puts the player as the winner.
+"""
     global winner
     if board[0] == board[1] == board[2] and board[1] != "-":
         winner = board[0]
@@ -128,10 +160,12 @@ def checkHorizont(board):
         winner = board[6]
         return True
 
-# Check If there is tree in a row vertically
-
 
 def checkVertic(board):
+"""
+Checks if any player has got three in a row
+vertically. And if so, that puts the player as the winner.
+"""
     global winner
     if board[0] == board[3] == board[6] and board[0] != "-":
         winner = board[0]
@@ -143,10 +177,12 @@ def checkVertic(board):
         winner = board[2]
         return True
 
-# Check If there is tree in a row diagonally
-
 
 def checkDiagon(board):
+"""
+Checks if any player has got three in a row
+diagonally. And if so, that puts the player as the winner.
+"""
     global winner
     if board[0] == board[4] == board[8] and board[0] != "-":
         winner = board[0]
@@ -155,9 +191,12 @@ def checkDiagon(board):
         winner = board[2]
         return True
 
-# Check tie
 
 def checkWinner():
+"""
+Check if someone has won. And if someone won, a message will appear. 
+And the game restarts.
+"""
     global board
     if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
         displayBoard(board)
@@ -171,6 +210,10 @@ def checkWinner():
 
 
 def checkTie():
+"""
+Check if it's a tie. And if so a message will appear. 
+And the game restarts.
+"""
     global board
     if "-" not in board and winner == None:
         displayBoard(board)
@@ -182,12 +225,10 @@ def checkTie():
         gameRunning = False
 
 
-
-        
-        
-
-
 while gameRunning:
+"""
+Calls function in the correct order when the game is running.
+"""
     refereceBoard(refBoard)
     displayBoard(board)
     playerChoise(board)
