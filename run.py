@@ -19,6 +19,7 @@ gameRunning = True
 winner = None
 input_correct = False
 
+
 def restartGame():
     """
     Used when a player wants to play again. Gives the user the options to
@@ -36,7 +37,7 @@ def restartGame():
     elif inp == "p":
         os.system('clear')
     else:
-        print("Wrong input") 
+        print("Wrong input")
         restartGame()
         os.system('clear')
 
@@ -61,7 +62,7 @@ def gameRules():
     elif inp == "p":
         os.system('clear')
     else:
-        print("Wrong input") 
+        print("Wrong input")
         restartGame()
         os.system('clear')
 
@@ -84,7 +85,7 @@ def start():
     elif inp == "p":
         os.system('clear')
     else:
-        print("Wrong input") 
+        print("Wrong input")
         restartGame()
         os.system('clear')
 
@@ -123,12 +124,12 @@ def playerChoise(board):
     """
     global input_correct
     while input_correct is False:
-        inp = int(input("Enter a number between 1-9: \n"))
-        if inp >= 1 and inp <= 9 and board[inp-1] == "-":
-            board[inp-1] = player
-            input_correct = True
-        elif inp <= 0 or inp > 9:
+        inp = input("Enter a number between 1-9: \n")
+        if not inp.isnumeric() or int(inp) <= 0 or int(inp) > 9:
             print("The input are incorect! Pleas try a number between 1-9")
+        elif int(inp) >= 1 and int(inp) <= 9 and board[int(inp)-1] == "-":
+            board[int(inp)-1] = player
+            input_correct = True
         else:
             print("The spot is alredy taken! Pleas try a number between 1-9")
     input_correct = False
