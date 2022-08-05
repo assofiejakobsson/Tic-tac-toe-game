@@ -8,20 +8,6 @@ In this game you play against the computer whoever gets three in a row wins.
 
 ![The responsive appearance of the game](assets/screenshot-amiresponsive.jpg)
 
-## How the game works
-
-The player is welcomed to the game. And is asked if it wants to play, read the game rules, or exit.
-
-If the player selects game rules, the game rules will come up. And the player can choose whether to play or exit the game.
-
-If the player chooses to exit the game, the player will receive a thank you message. And the player can choose whether to play.
-
-If the player chooses to play, a reference board will appear showing which number belongs to the box. And below that, an empty game board appears, with a text showing who the player and the computer are. And the player gets to start choosing a square.
-
-The player and the computer take turns choosing a free square until someone wins or until there is a tie.
-
-The player can choose to play as many times as they want. And whoever lost the round gets to start the next game round.
-
 ## Game flow chart
 
 To understand how the game works. Created in [Lucid](https://lucid.app/lucidchart/eb289532-1f80-4e71-8b0f-16fa9bfdbac1/edit?invitationId=inv_bd327f40-8cdc-449b-bb8e-2e85c2ac9540&page=0_0#)
@@ -48,7 +34,36 @@ Simple to understand | Good explanations in the right place
 - __If the player selects game rules, the game rules will come up. And the player can choose whether to play or exit the game.__
 - __The game rules and options are easy to read and understand. This facilitates ease of use.__
 
-![screenshot-game-start](assets/screenshot-game-rules.jpg)
+![screenshot-game-rules](assets/screenshot-game-rules.jpg)
+
+- __If the player chooses to exit the game, the player will receive a thank you message. And the player can choose whether to play.__
+- __The message and option are easy to read and understand. This facilitates ease of use.__
+
+![screenshot-game-exit](assets/screenshot-game-exit.jpg)
+
+- __If the player chooses to play, a reference board will appear showing which number belongs to the box. And below that, an empty game board appears, with a text showing who the player and the computer are. And the player gets to start choosing a square.__
+- __This gives the user a quick overview and understanding of how the game works__
+
+![screenshot-game-play](assets/screenshot-game-playe.jpg)
+
+- __When the user presses a sign or a number outside 1-9, a message is displayed "The input are incorect!"__
+- __When the user selects a number that is already taken, a message is displayed "The spot is alredy taken! Please enter a free spot"__
+- __This helps the user quickly understand what is wrong__
+
+![screenshot-game-incorect-input](assets/screenshot-game-incorect-input.jpg)
+
+- __The player and the computer take turns choosing a free square until someone wins or until there is a tie.__
+- __The screen is cleared and all that remains is the game board and message with the result. And navigation options.__
+- __A clean screen with only the most necessary information. Make the game easier to use__
+
+![screenshot-game-tie](assets/screenshot-game-tie.jpg)
+
+- __The player and the computer take turns choosing a free square until someone wins or until there is a tie.__
+- __The player can choose to play as many times as they want. And whoever lost the round gets to start the next game round.__
+
+![screenshot-game-tie](assets/screenshot-game-win.jpg)
+
+
 
 
 
