@@ -131,12 +131,12 @@ def playerChoise(board):
     while input_correct is False:
         inp = input("Enter a number between 1-9: \n")
         if not inp.isnumeric() or int(inp) <= 0 or int(inp) > 9:
-            print("The input are incorect! Pleas try a number between 1-9")
+            print("The input are incorect!")
         elif int(inp) >= 1 and int(inp) <= 9 and board[int(inp)-1] == "-":
             board[int(inp)-1] = player
             input_correct = True
         else:
-            print("The spot is alredy taken! Pleas try a number between 1-9")
+            print("The spot is alredy taken! Please enter a free spot")
     input_correct = False
 
 
