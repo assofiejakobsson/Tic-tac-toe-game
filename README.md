@@ -22,6 +22,26 @@ The player and the computer take turns choosing a free square until someone wins
 
 The player can choose to play as many times as they want. And whoever lost the round gets to start the next game round.
 
+## Game flow chart
+
+To understand how the game works. Created in [Lucid](https://lucid.app/lucidchart/eb289532-1f80-4e71-8b0f-16fa9bfdbac1/edit?invitationId=inv_bd327f40-8cdc-449b-bb8e-2e85c2ac9540&page=0_0#)
+
 ![user flow chart](assets/screenshot-userflow.jpg)
+
+## UX 
+
+### The game creator's goal
+
+- __Provide users with entertainment__
+- ____
+
+| Users goal | How the creator fulfills this
+----|----
+Play tic tac toe against the computer | Make a tic tac toe game you can play against the computer |
+Easy to navigate | Good navigation possibilities
+Simple to understand | Good explanations in the right place 
+
+
+
 
 
