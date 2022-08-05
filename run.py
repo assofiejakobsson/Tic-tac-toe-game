@@ -99,9 +99,11 @@ def refereceBoard(refBoard):
     is running to facilitate UX.
     """
     print("Reference board")
+    print("---------")
     print("1-" "|"  "-2-" "|" "-3")
     print("4-" "|"  "-5-" "|" "-6")
     print("7-" "|"  "-8-" "|" "-9")
+    print("---------")
 
 
 def displayBoard(board):
@@ -111,9 +113,12 @@ def displayBoard(board):
     and the computer make their choices.
     """
     print("Game board")
+    print("You: x Computer: o")
+    print("---------")
     print(board[0] + " | " + board[1] + " | " + board[2])
     print(board[3] + " | " + board[4] + " | " + board[5])
     print(board[6] + " | " + board[7] + " | " + board[8])
+    print("---------")
 
 
 def playerChoise(board):
@@ -212,6 +217,7 @@ def checkWinner():
     """
     global board
     if checkHorizont(board) or checkVertic(board) or checkDiagon(board):
+        os.system('clear')
         displayBoard(board)
         print(f"Winner is {winner}")
         time.sleep(2.4)
@@ -228,6 +234,7 @@ def checkTie():
     """
     global board
     if "-" not in board:
+        os.system('clear')
         displayBoard(board)
         print("It,s a tie!")
         board = ["-", "-", "-",
