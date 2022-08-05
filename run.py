@@ -55,8 +55,8 @@ def gameRules():
     print("5. You can get three in a row (up, down, across, or diagonally)")
     inp = str(input("Enter p for play or e for exit: "))
     if inp == "e":
-        print("Thank you for playing")
         os.system('clear')
+        print("Thank you for playing")
         inp = str(input("If yo want to play agin enter p: \n"))
         os.system('clear')
     elif inp == "p":
@@ -78,7 +78,7 @@ def start():
     if inp == "e":
         print("Thank you for playing")
         inp = str(input("If yo want to play agin enter p: \n"))
-        os.system('clear')
+        
     elif inp == "r":
         gameRules()
         os.system('clear')

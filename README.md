@@ -30,16 +30,30 @@ To understand how the game works. Created in [Lucid](https://lucid.app/lucidchar
 
 ## UX 
 
-### The game creator's goal
-
-- __Provide users with entertainment__
-
-
 | Users goal | How the creator fulfills this
 ----|----
 Play tic tac toe against the computer | Make a tic tac toe game you can play against the computer |
 Easy to navigate | Good navigation possibilities
 Simple to understand | Good explanations in the right place 
+
+## Features
+
+### How the game works
+
+- __The player is welcomed to the game. And is asked if it wants to play, read the game rules, or exit.__
+- __This is clear and easy to understand, which facilitates ease of use__
+
+![screenshot-game-start](assets/screenshot-game-start.jpg)
+
+- __If the player selects game rules, the game rules will come up. And the player can choose whether to play or exit the game.__
+- __The game rules and options are easy to read and understand. This facilitates ease of use.__
+
+![screenshot-game-start](assets/screenshot-game-rules.jpg)
+
+
+
+
+
 
 
 
