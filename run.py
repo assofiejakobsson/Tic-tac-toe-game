@@ -2,7 +2,7 @@
 
 import random  # Used for the computer's selection.
 import os  # Used to clear the screen.
-import time  # Used to set time before another method is executed.
+
 
 # Global variabel
 
@@ -99,11 +99,11 @@ def refereceBoard(refBoard):
     is running to facilitate UX.
     """
     print("Reference board")
-    print("---------")
-    print("1-" "|"  "-2-" "|" "-3")
-    print("4-" "|"  "-5-" "|" "-6")
-    print("7-" "|"  "-8-" "|" "-9")
-    print("---------")
+    print("-------------")
+    print("|" "-1-" "|"  "-2-" "|" "-3-" "|")
+    print("|" "-4-" "|"  "-5-" "|" "-6-" "|")
+    print("|" "-7-" "|"  "-8-" "|" "-9-" "|")
+    print("-------------")
 
 
 def displayBoard(board):
@@ -114,11 +114,11 @@ def displayBoard(board):
     """
     print("Game board")
     print("You: x Computer: o")
-    print("---------")
-    print(board[0] + " | " + board[1] + " | " + board[2])
-    print(board[3] + " | " + board[4] + " | " + board[5])
-    print(board[6] + " | " + board[7] + " | " + board[8])
-    print("---------")
+    print("-------------")
+    print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
+    print("| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
+    print("| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
+    print("-------------")
 
 
 def playerChoise(board):
