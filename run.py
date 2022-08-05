@@ -220,7 +220,6 @@ def checkWinner():
         os.system('clear')
         displayBoard(board)
         print(f"Winner is {winner}")
-        time.sleep(2.4)
         board = ["-", "-", "-",
                  "-", "-", "-",
                  "-", "-", "-"]
