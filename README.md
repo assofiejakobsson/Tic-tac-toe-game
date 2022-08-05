@@ -33,7 +33,7 @@ To understand how the game works. Created in [Lucid](https://lucid.app/lucidchar
 ### The game creator's goal
 
 - __Provide users with entertainment__
-- ____
+
 
 | Users goal | How the creator fulfills this
 ----|----
