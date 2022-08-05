@@ -57,7 +57,7 @@ def gameRules():
     if inp == "e":
         os.system('clear')
         print("Thank you for playing")
-        inp = str(input("If yo want to play agin enter p: \n"))
+        inp = str(input("If you want to play again, press enter: \n"))
         os.system('clear')
     elif inp == "p":
         os.system('clear')
@@ -77,8 +77,8 @@ def start():
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        inp = str(input("If yo want to play agin enter p: \n"))
-        
+        inp = str(input("If you want to play again, press enter: \n"))
+        os.system('clear')
     elif inp == "r":
         gameRules()
         os.system('clear')

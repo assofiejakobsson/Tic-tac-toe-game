@@ -63,6 +63,22 @@ Simple to understand | Good explanations in the right place
 
 ![screenshot-game-tie](assets/screenshot-game-win.jpg)
 
+## Testing
+
+I have tested this game through the following steps:
+
+- __I have tested that everything works on different browsers: Chrome, Edge, and Firefox__
+- __I have asked family and friends to test the game and see if it works__
+- __I have tested it in my local terminal and in the  Code Institute mock terminal on Heroku.__
+
+## Validator Testing
+
+- __pep8online__
+
+  - The python code is approved
+
+
+
 
 
 
