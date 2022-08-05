@@ -129,7 +129,7 @@ def playerChoise(board):
     """
     global input_correct
     while input_correct is False:
-        inp = input("Play enter a number between 1-9 or 10 for restart) \n")
+        inp = input("Play enter a number between 1-9 or 10 for go back home\n")
         if not inp.isnumeric() or int(inp) <= 0 or int(inp) > 10:
             print("The input are incorect!")
         elif int(inp) >= 1 and int(inp) <= 9 and board[int(inp)-1] == "-":
@@ -137,7 +137,7 @@ def playerChoise(board):
             input_correct = True
         elif int(inp) == 10:
             os.system('clear')
-            restartGame()
+            start()
             input_correct = True
         else:
             print("The spot is alredy taken! Please enter a free spot")
