@@ -1,31 +1,27 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# TIC TAC TOE GAME
 
-Welcome assofiejakobsson,
+Tic tac toe game is a classic three in a row game that is also usually played with pen and paper.
+You can read more about it in [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
+In this game you play against the computer whoever gets three in a row wins. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[Here](https://tic-tac-toe-game-python.herokuapp.com/?fbclid=IwAR3vCA1AoyU9nDad_jioKuAjqZCTV-8yYd-x1KAHFBb_rFpIQXLTJNcUSK0) is the live link to my python game, which runs in the Code Institute mock terminal on Heroku.
 
-## Reminders
+![The responsive appearance of the game](assets/screenshot-amiresponsive.jpg)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How the game works
 
-## Creating the Heroku app
+The player is welcomed to the game. And is asked if it wants to play, read the game rules, or exit.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+If the player selects game rules, the game rules will come up. And the player can choose whether to play or exit the game.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+If the player chooses to exit the game, the player will receive a thank you message. And the player can choose whether to play.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+If the player chooses to play, a reference board will appear showing which number belongs to the box. And below that, an empty game board appears, with a text showing who the player and the computer are. And the player gets to start choosing a square.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The player and the computer take turns choosing a free square until someone wins or until there is a tie.
 
-Connect your GitHub repository and deploy as normal.
+The player can choose to play as many times as they want. And whoever lost the round gets to start the next game round.
 
-## Constraints
+![user flow chart](assets/screenshot-userflow.jpg)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
------
-Happy coding!
