@@ -2,16 +2,16 @@
 
 Tic tac toe game is a classic three in a row game that is also usually played with pen and paper.
 You can read more about it in [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
-In this game you play against the computer whoever gets three in a row wins. The target audience for this game is both children and adults who want to have fun and practice their tic tac toe skills. 
+In this game, you play against the computer whoever gets three in a row wins. The target audience for this game is both children and adults who want to have fun and practice their tic tac toe skills. 
 
 [Here](https://tic-tac-toe-game-python.herokuapp.com/?fbclid=IwAR3vCA1AoyU9nDad_jioKuAjqZCTV-8yYd-x1KAHFBb_rFpIQXLTJNcUSK0) is the live link to this python game, which runs in the Code Institute mock terminal on Heroku.
 
 ![The responsive appearance of the game](assets/screenshot-amiresponsive.jpg)
 
-## Table of Contents
+## Table of contents
 
 - [TIC TAC TOE GAME](#tic-tac-toe-game)
-  - [Table of Contents](#table-of-contents)
+  - [Table of contents](#table-of-contents)
   - [Game flow chart](#game-flow-chart)
   - [UX](#ux)
   - [Features](#features)
@@ -37,16 +37,16 @@ To understand how the game works. Created in [Lucid](https://lucid.app/lucidchar
 | Users goal | How the creator fulfills this
 ----|----
 Play tic tac toe against the computer | Make a tic tac toe game you can play against the computer |
-Practice their tic tac toe skills | Allows the user to play as many times as they want
-Easy to navigate | Good navigation possibilities
-Simple to understand | Good explanations in the right place 
+Practice their tic tac toe skills | Play as many times as they want against the computer without any problems 
+Easy to navigate | Clean and good navigation possibilities
+Simple to understand | Clean and good explanations in the right place 
 | |
 
 ## Features
 
 ### How the game works
 
-- __The player is welcomed to the game. And is asked if it wants to play, read the game rules, or exit.__
+- __The player is welcomed to the game. And the player is asked if they want to play, read the game rules, or exit.__
 - __This is clear and easy to understand, which facilitates ease of use__
 
 ![screenshot-game-start](assets/screenshot-game-start.jpg)
@@ -176,6 +176,8 @@ To deploy this page to Heroku the following steps have been followed:
 - __I have used this page [scaler](https://www.scaler.com/topics/random-function-in-python/) to be able to clear the screen and set the computer's selection to random__
 - __Details of tic tac toe game [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
 - __I got the game rules from [.exploratorium](https://www.exploratorium.edu/brain_explorer/tictactoe.html)__
+
+[Back to Table of contents](#table-of-contents)
 
 
 

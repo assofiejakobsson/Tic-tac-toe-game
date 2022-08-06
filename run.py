@@ -23,7 +23,7 @@ input_correct = False
 def restartGame():
     """
     Used when a player wants to play again. Gives the user the options to
-    play again, play rules, or exit the game. With a suitable message.
+    play again, game rules, or exit the game. With a suitable message.
     """
     inp = str(input("Press p for play, r for rules, e for exit and enter: \n"))
     os.system('clear')
@@ -53,7 +53,7 @@ def gameRules():
     print("3. Players take turns putting their marks in empty squares.")
     print("4. The first player to get 3 in a row, is the winner.")
     print("5. You can get three in a row (up, down, across, or diagonally)")
-    inp = str(input("Enter p for play or e for exit: "))
+    inp = str(input("Press p for play or e for exit and enter: "))
     if inp == "e":
         os.system('clear')
         print("Thank you for playing")
