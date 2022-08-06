@@ -113,6 +113,27 @@ I have tested this game through the following steps:
   - Your app was successfully deployed.
   - Click View.
 
+## Fork the project
+
+- __Log in to gitHub and find the repository.__
+- __In the top right corner click the Fork button.__
+- __Done you can now work on the copy.__
+
+## Credits
+
+### Content
+
+- __I have been helped with the error message in playerChoise() by Tutor at code institute.__
+- __My starting code I get from this [youtube video](https://www.youtube.com/watch?v=dK6gJw4-NCo)__
+- __I have used [Greatlearning](https://www.mygreatlearning.com/blog/readme-file/)  for the Tables in the README.md file.__
+- __Details of tic tac toe game [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
+- __I have used this page [scaler](https://www.scaler.com/topics/random-function-in-python/) to be able to clear the screen and set the computer's selection to random__
+
+
+
+
+
+
 
 
 

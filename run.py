@@ -25,7 +25,7 @@ def restartGame():
     Used when a player wants to play again. Gives the user the options to
     play again, play rules, or exit the game. With a suitable message.
     """
-    inp = str(input("Enter p for play or r for ruels or e for exit: \n"))
+    inp = str(input("Enter p for play or r for rules or e for exit: \n"))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
