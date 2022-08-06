@@ -8,6 +8,24 @@ In this game you play against the computer whoever gets three in a row wins. The
 
 ![The responsive appearance of the game](assets/screenshot-amiresponsive.jpg)
 
+## Table of Contents
+
+- [TIC TAC TOE GAME](#tic-tac-toe-game)
+  - [Table of Contents](#table-of-contents)
+  - [Game flow chart](#game-flow-chart)
+  - [UX](#ux)
+  - [Features](#features)
+    - [How the game works](#how-the-game-works)
+    - [Features I want to add](#features-i-want-to-add)
+  - [Libraries](#libraries)
+  - [Testing](#testing)
+    - [Bugs](#bugs)
+  - [Validator Testing](#validator-testing)
+  - [Deployment](#deployment)
+  - [Fork the project](#fork-the-project)
+  - [Clone the projekt](#clone-the-projekt)
+  - [Credits](#credits)
+
 ## Game flow chart
 
 To understand how the game works. Created in [Lucid](https://lucid.app/lucidchart/eb289532-1f80-4e71-8b0f-16fa9bfdbac1/edit?invitationId=inv_bd327f40-8cdc-449b-bb8e-2e85c2ac9540&page=0_0#)
@@ -70,7 +88,7 @@ Simple to understand | Good explanations in the right place
 - __Restart option when the game is running__
 - __Option to play 2 players against each other__
 
-## Libraries'
+## Libraries
 
 In this project the following are used:
 
@@ -114,9 +132,9 @@ I have tested this game through the following steps:
 
 ## Deployment
 
-### To deploy this page to Heroku the following steps have been followed:
+To deploy this page to Heroku the following steps have been followed:
 
-- __Go to [Heroku](https://dashboard.heroku.com/apps/sandwiche/deploy/github). __
+- __Go to [Heroku](https://dashboard.heroku.com/apps/sandwiche/deploy/github).__
 - __Create an account or log in if you have already registered.__
 - __Click on New and select Create new app from the drop-down menu.__
 - __Enter your app name. The app name must be unique to be approved. After that select your region.__
