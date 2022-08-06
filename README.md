@@ -63,6 +63,11 @@ Simple to understand | Good explanations in the right place
 
 ![screenshot-game-tie](assets/screenshot-game-win.jpg)
 
+### Features I want to add
+
+- __Restart option when the game is running__
+- __Option to play 2 players against each other__
+
 ## Testing
 
 I have tested this game through the following steps:
@@ -71,11 +76,44 @@ I have tested this game through the following steps:
 - __I have asked family and friends to test the game and see if it works__
 - __I have tested it in my local terminal and in the  Code Institute mock terminal on Heroku.__
 
+### Bugs
+
+- __My restart function didn't work because I called it above where it was written. I solved this by moving it to the top.__
+- __I got an error message on my Docstring comments because there were indentation errors in several places in the rest of the code. I solved this by going through the entire code line by line and fixing the indents.__
+  
+  - __Unfixed Bugs__
+
+  - None that I know of
+
 ## Validator Testing
 
 - __pep8online__
 
-  - The python code is approved
+  - The code did not give any error messages in [pep8online](http://pep8online.com/checkresult)
+
+## Deployment
+
+### To deploy this page to Heroku the following steps have been followed:
+
+- __Go to [Heroku](https://dashboard.heroku.com/apps/sandwiche/deploy/github). __
+- __Create an account or log in if you have already registered.__
+- __Click on New and select Create new app from the drop-down menu.__
+- __Enter your app name. The app name must be unique to be approved. After that select your region.__
+- __Click on Create app.__
+- __Click settings and scroll down to Config vars.__
+- __Click on Reveal config vars and type PORT in KEY and type 8000 the value field Click the Add button.__
+- __Scroll down to Buildpacks. And click the Add buildpack and select python and node.js. You can only choose one at a time and python must come before node.js. If python is not first, just click and drag it to the top and save.__
+- __click on the deploy tab. And scroll down and select gitHub as deployment.__
+- __Connect your github account, confirm and proceed.__
+- __Search for and select your repository name and connect.__
+- __When it's done and successfully connected, select how you want to push updates from the following options:__
+  - Use Automatic deploys if you would like a new build when changes are pushed to GitHub from Gitpod.
+  - Use Manual deploy for a new build every time this button is clicked.
+  - Select a branch to deploy and press deploy branch.
+  - Your app was successfully deployed.
+  - Click View.
+
+
 
 
 
