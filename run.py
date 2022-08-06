@@ -25,11 +25,11 @@ def restartGame():
     Used when a player wants to play again. Gives the user the options to
     play again, play rules, or exit the game. With a suitable message.
     """
-    inp = str(input("Enter p for play or r for rules or e for exit: \n"))
+    inp = str(input("Press p for play, r for rules, e for exit and enter: \n"))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
-        inp = str(input("If you want to play agin enter p: \n"))
+        inp = str(input("If you want to play agin press enter: \n"))
         os.system('clear')
     elif inp == "r":
         gameRules()
@@ -73,7 +73,7 @@ def start():
     play, read game rules or exit the game. With a suitable message.
     """
     print("Welcome to Tic, tac, toe game!")
-    inp = str(input("Enter p for play, r for rules or e for exit: \n"))
+    inp = str(input("Press p for play, r for rules, e for exit and enter: \n"))
     os.system('clear')
     if inp == "e":
         print("Thank you for playing")
@@ -129,14 +129,14 @@ def playerChoise(board):
     """
     global input_correct
     while input_correct is False:
-        inp = input("Enter a number between 1-9: \n")
+        inp = input("Press a number between 1-9 and enter: \n")
         if not inp.isnumeric() or int(inp) <= 0 or int(inp) > 9:
             print("The input are incorect!")
         elif int(inp) >= 1 and int(inp) <= 9 and board[int(inp)-1] == "-":
             board[int(inp)-1] = player
             input_correct = True
         else:
-            print("The spot is alredy taken! Please enter a free spot")
+            print("The spot is alredy taken! Please choose a free spot")
     input_correct = False
 
 
