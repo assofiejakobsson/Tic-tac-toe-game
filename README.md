@@ -2,9 +2,9 @@
 
 Tic tac toe game is a classic three in a row game that is also usually played with pen and paper.
 You can read more about it in [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
-In this game you play against the computer whoever gets three in a row wins. 
+In this game you play against the computer whoever gets three in a row wins. The target audience for this game is both children and adults who want to have fun and practice their tic tac toe skills. 
 
-[Here](https://tic-tac-toe-game-python.herokuapp.com/?fbclid=IwAR3vCA1AoyU9nDad_jioKuAjqZCTV-8yYd-x1KAHFBb_rFpIQXLTJNcUSK0) is the live link to my python game, which runs in the Code Institute mock terminal on Heroku.
+[Here](https://tic-tac-toe-game-python.herokuapp.com/?fbclid=IwAR3vCA1AoyU9nDad_jioKuAjqZCTV-8yYd-x1KAHFBb_rFpIQXLTJNcUSK0) is the live link to this python game, which runs in the Code Institute mock terminal on Heroku.
 
 ![The responsive appearance of the game](assets/screenshot-amiresponsive.jpg)
 
@@ -19,8 +19,10 @@ To understand how the game works. Created in [Lucid](https://lucid.app/lucidchar
 | Users goal | How the creator fulfills this
 ----|----
 Play tic tac toe against the computer | Make a tic tac toe game you can play against the computer |
+Practice their tic tac toe skills | Allows the user to play as many times as they want
 Easy to navigate | Good navigation possibilities
 Simple to understand | Good explanations in the right place 
+| |
 
 ## Features
 
@@ -68,18 +70,37 @@ Simple to understand | Good explanations in the right place
 - __Restart option when the game is running__
 - __Option to play 2 players against each other__
 
+## Libraries'
+
+In this project the following are used:
+
+- __random as used for the computer's random selection in the game. And it is written like this random.randint(0, 8). 0, 8 stand for the squares in the board that the computer must randomly choose from. And to be able to use it, you have to import it into your code. This is done by writing import random at the top of the code.__
+- __os used to clear the screen. And it is needed for the UX. Without this, the screen becomes messy and difficult to use. Where you want the screen to be cleared in the code, write os.system('clear'). And to be able to use it, you have to import it into your code. This is done by writing import os at the top of the code.__
+
+
 ## Testing
 
 I have tested this game through the following steps:
 
 - __I have tested that everything works on different browsers: Chrome, Edge, and Firefox__
-- __I have asked family and friends to test the game and see if it works__
+- __I have asked family and friends to test the game. And see if it works on their computers, mobiles and iPads__
 - __I have tested it in my local terminal and in the  Code Institute mock terminal on Heroku.__
 
 ### Bugs
 
 - __My restart function didn't work because I called it above where it was written. I solved this by moving it to the top.__
 - __I got an error message on my Docstring comments because there were indentation errors in several places in the rest of the code. I solved this by going through the entire code line by line and fixing the indents.__
+- __I failed to get the error message when the user pressed a character. see the code with an error below__
+  
+![screenshot-bug](assets/screenshot-bug.jpg)
+  
+- __With the help of a tutor at the Code institute, I got help with the error, see the image below__
+
+![screenshot-fixed-bug](assets/screenshot-fixed-bug.jpg)
+
+- __The bug was that isnumeric() needed to be read first for the code to work.__
+
+
   
   - __Unfixed Bugs__
 
@@ -117,17 +138,26 @@ I have tested this game through the following steps:
 
 - __Log in to gitHub and find the repository.__
 - __In the top right corner click the Fork button.__
-- __Done you can now work on the copy.__
+- __Done you can start work on the copy.__
+
+## Clone the projekt
+
+- __Go to Github and go to the main page of the repository.__
+- __Click the button ’Code’ above the files.__
+- __Select between HTTPS, SSH or Github CLI, then copy the URL.__
+- __Open Git Bash in your IDE.__
+- __Change the directory to the location where you want the cloned directory.__
+- __Type 'git clone' and paste the URL.__
+- __Press enter, and now it’s done.__
 
 ## Credits
-
-### Content
 
 - __I have been helped with the error message in playerChoise() by Tutor at code institute.__
 - __My starting code I get from this [youtube video](https://www.youtube.com/watch?v=dK6gJw4-NCo)__
 - __I have used [Greatlearning](https://www.mygreatlearning.com/blog/readme-file/)  for the Tables in the README.md file.__
-- __Details of tic tac toe game [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
 - __I have used this page [scaler](https://www.scaler.com/topics/random-function-in-python/) to be able to clear the screen and set the computer's selection to random__
+- __Details of tic tac toe game [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
+- __I got the game rules from [.exploratorium](https://www.exploratorium.edu/brain_explorer/tictactoe.html)__
 
 
 
