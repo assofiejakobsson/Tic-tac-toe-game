@@ -19,7 +19,8 @@ In this game, you play against the computer whoever gets three in a row wins. Th
     - [Features I want to add](#features-i-want-to-add)
   - [Libraries](#libraries)
   - [Testing](#testing)
-    - [Bugs](#bugs)
+  - [Bugs](#bugs)
+    - [Solved bugs](#solved-bugs)
   - [Validator Testing](#validator-testing)
   - [Deployment](#deployment)
   - [Fork the project](#fork-the-project)
@@ -104,7 +105,9 @@ I have tested this game through the following steps:
 - __I have asked family and friends to test the game. And see if it works on their computers, mobiles and iPads__
 - __I have tested it in my local terminal and in the Code Institute mock terminal on Heroku.__
 
-### Bugs
+## Bugs
+
+### Solved bugs
 
 - __My restart function didn't work because I called it above where it was written. I solved this by moving it to the top.__
 - __I got an error message on my Docstring comments because there were indentation errors in several places in the rest of the code. I solved this by going through the entire code line by line and fixing the indents.__
