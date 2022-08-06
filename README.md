@@ -67,7 +67,7 @@ Simple to understand | Clean and good explanations in the right place
 ![screenshot-game-play](assets/screenshot-game-playe.jpg)
 
 - __When the user presses a sign or a number outside 1-9, a message is displayed "The input are incorect!"__
-- __When the user selects a number that is already taken, a message is displayed "The spot is alredy taken! Please enter a free spot"__
+- __When the user selects a number that is already taken, a message is displayed "The spot is alredy taken! Please choose a free spot"__
 - __This helps the user quickly understand what is wrong__
 
 ![screenshot-game-incorect-input](assets/screenshot-game-incorect-input.jpg)
@@ -90,10 +90,10 @@ Simple to understand | Clean and good explanations in the right place
 
 ## Libraries
 
-In this project the following are used:
+In this project the following libraries are used:
 
 - __random as used for the computer's random selection in the game. And it is written like this random.randint(0, 8). 0, 8 stand for the squares in the board that the computer must randomly choose from. And to be able to use it, you have to import it into your code. This is done by writing import random at the top of the code.__
-- __os used to clear the screen. And it is needed for the UX. Without this, the screen becomes messy and difficult to use. Where you want the screen to be cleared in the code, write os.system('clear'). And to be able to use it, you have to import it into your code. This is done by writing import os at the top of the code.__
+- __os used to clear the screen. And it is needed for the UX. Without this, the screen becomes messy and difficult to use. Where you want the screen to be cleared in the code write, os.system('clear'). And to be able to use it, you have to import it into your code. This is done by writing import os at the top of the code.__
 
 
 ## Testing
@@ -102,7 +102,7 @@ I have tested this game through the following steps:
 
 - __I have tested that everything works on different browsers: Chrome, Edge, and Firefox__
 - __I have asked family and friends to test the game. And see if it works on their computers, mobiles and iPads__
-- __I have tested it in my local terminal and in the  Code Institute mock terminal on Heroku.__
+- __I have tested it in my local terminal and in the Code Institute mock terminal on Heroku.__
 
 ### Bugs
 
@@ -117,8 +117,6 @@ I have tested this game through the following steps:
 ![screenshot-fixed-bug](assets/screenshot-fixed-bug.jpg)
 
 - __The bug was that isnumeric() needed to be read first for the code to work.__
-
-
   
   - __Unfixed Bugs__
 
@@ -128,11 +126,12 @@ I have tested this game through the following steps:
 
 - __pep8online__
 
-  - The code did not give any error messages in [pep8online](http://pep8online.com/checkresult)
+  - The code did not give any error messages in pep8online.com.
 
 ## Deployment
 
-To deploy this page to Heroku the following steps have been followed:
+To deploy this page to Heroku. I have followed, Code institute, Love Sandwiches Walkthrough Project.
+The following steps have been followed:
 
 - __Go to [Heroku](https://dashboard.heroku.com/apps/sandwiche/deploy/github).__
 - __Create an account or log in if you have already registered.__
@@ -140,7 +139,7 @@ To deploy this page to Heroku the following steps have been followed:
 - __Enter your app name. The app name must be unique to be approved. After that select your region.__
 - __Click on Create app.__
 - __Click settings and scroll down to Config vars.__
-- __Click on Reveal config vars and type PORT in KEY and type 8000 the value field Click the Add button.__
+- __Click on Reveal config vars and type PORT in KEY and type 8000 in the value field. Click the Add button.__
 - __Scroll down to Buildpacks. And click the Add buildpack and select python and node.js. You can only choose one at a time and python must come before node.js. If python is not first, just click and drag it to the top and save.__
 - __click on the deploy tab. And scroll down and select gitHub as deployment.__
 - __Connect your github account, confirm and proceed.__
@@ -158,6 +157,8 @@ To deploy this page to Heroku the following steps have been followed:
 - __In the top right corner click the Fork button.__
 - __Done you can start work on the copy.__
 
+You can read more about it here [GitHub](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+
 ## Clone the projekt
 
 - __Go to Github and go to the main page of the repository.__
@@ -168,14 +169,16 @@ To deploy this page to Heroku the following steps have been followed:
 - __Type 'git clone' and paste the URL.__
 - __Press enter, and now it’s done.__
 
+You can read more about it here [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
 ## Credits
 
 - __I have been helped with the error message in playerChoise() by Tutor at code institute.__
 - __My starting code I get from this [youtube video](https://www.youtube.com/watch?v=dK6gJw4-NCo)__
 - __I have used [Greatlearning](https://www.mygreatlearning.com/blog/readme-file/)  for the Tables in the README.md file.__
 - __I have used this page [scaler](https://www.scaler.com/topics/random-function-in-python/) to be able to clear the screen and set the computer's selection to random__
-- __Details of tic tac toe game [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
-- __I got the game rules from [.exploratorium](https://www.exploratorium.edu/brain_explorer/tictactoe.html)__
+- __I have received details of tic tac toe game on [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)__
+- __I got the game rules from [exploratorium](https://www.exploratorium.edu/brain_explorer/tictactoe.html)__
 
 [Back to Table of contents](#table-of-contents)
 
